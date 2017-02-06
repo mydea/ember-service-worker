@@ -1,0 +1,31 @@
+{
+  "passes": [{
+    "recordNetwork": true,
+    "recordTrace": true,
+    "gatherers": [
+      "url",
+      "service-worker",
+      "offline"]
+  }],
+
+  "audits": [
+    "service-worker"
+  ],
+
+  "aggregations": [{
+    "name": "Perf metrics",
+    "description": "",
+    "scored": true,
+    "categorizable": true,
+    "items": [{
+      "name": "Page load performance is fast",
+      "description": "",
+      "audits": {
+        "service-worker": {
+          "expectedValue": true,
+          "weight": 1
+        }
+      }
+    }]
+  }]
+}
