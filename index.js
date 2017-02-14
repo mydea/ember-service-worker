@@ -55,7 +55,7 @@ module.exports = {
 
   contentFor(type, config) {
     if (type === 'body-footer' && config.environment !== 'test') {
-      return `<script src="${this._getRootURL()}sw-registration.js"></script>`;
+      return `<script async src="${this._getRootURL()}sw-registration.js"></script>`;
     }
   },
 
